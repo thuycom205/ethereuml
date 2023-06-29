@@ -18,3 +18,7 @@ FROM ( SELECT wp_posts.ID as ID, wp_posts.post_content as content , wctag.meta_v
                 ORDER BY sum_id asc) AS B
 
               ON A.ID=B.sum_id;
+
+
+
+SELECT DISTINCT meta_value FROM wp_postmeta  where meta_key='tag';
